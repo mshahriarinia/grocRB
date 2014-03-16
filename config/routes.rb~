@@ -1,6 +1,6 @@
 GrocRB::Application.routes.draw do
   
-  root 'pages#home'
+  root 'pages#index'
   match '/home', to: 'pages#home', via: :GET
   match '/about', to: 'pages#about', via: :GET
   match '/contact', to: 'pages#contact', via: :GET
