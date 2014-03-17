@@ -1,0 +1,18 @@
+%h1.title Stores
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th More Info
+  %tbody
+    - @stores.each do |p|
+      %tr
+        %td= p.name 
+        %td= p.address
+        %td= link_to "More details", store_path(p)
+
+= link_to 'Add user', new_store_path
+
+

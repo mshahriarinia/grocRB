@@ -22,3 +22,19 @@ product_types = [#{:name => '', :brand => '', :description => ''},
 product_types.each do |p|
   ProductType.create!(p)
 end
+
+#------------------------------------------------------------
+
+users = [#{:name => '', :password => '', :email => '', :description => ''},
+	{:name => 'John Brown', :password => 'test', :email => 'john@yahoo.com' ,:description => 'Hi, my name is john'},
+	{:name => 'Melissa', :password => 'Parker', :email => 'm.parker@gmail.com', :description => 'I love shopping.'},
+	{:name => 'Janet', :password => 'Stewart', :email => 'js322@gmail.com', :description => 'Mother of two, organic enthusiast.'},
+]
+
+users.each do |p|
+  User.create!(p)
+end
+
+
+
+

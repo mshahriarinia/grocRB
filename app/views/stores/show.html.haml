@@ -1,0 +1,19 @@
+-# in app/views/store/show.html.haml
+
+%h2 Details about #{@store.name}
+
+%ul#details
+  %li
+    Name:
+    = @store.name
+  %li
+    Address:
+    = @store.address
+
+%h3 Description:
+
+%p#description= @store.description
+
+= link_to 'Edit', edit_store_path(@store)
+= button_to 'Delete', store_path(@store), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to stores list', stores_path

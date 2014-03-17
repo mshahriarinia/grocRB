@@ -1,19 +1,20 @@
+
+
+
+
 %h1.title Users
 
 %table
   %thead
     %tr
       %th Name
-      %th Password
       %th email
-      %th Description
       %th More Info
   %tbody
     - @users.each do |p|
       %tr
         %td= p.name 
-        %td= p.brand
-        %td= p.description
+        %td= p.email
         %td= link_to "More details", user_path(p)
 
 = link_to 'Add user', new_user_path

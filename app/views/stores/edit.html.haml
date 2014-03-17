@@ -1,0 +1,16 @@
+-# edit.html.haml using partial
+
+%h1 Edit Existing Store
+
+= form_tag store_path(@store), :method => :put do
+
+  = label :store, :name, 'Name'
+  = text_field :store, 'name'
+
+  = label :store, :address, 'Address'
+  = text_field :store, 'address'
+
+  = label :store, :description, 'Description'
+  = text_area :store, 'description'
+
+  = submit_tag 'Save Changes'
