@@ -1,9 +1,11 @@
 GrocRB::Application.routes.draw do
   
-  root 'pages#index'
+  root 'pages#home'
   match '/home', to: 'pages#home', via: :GET
   match '/about', to: 'pages#about', via: :GET
   match '/contact', to: 'pages#contact', via: :GET
+
+  resource :product_types
     
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
