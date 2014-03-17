@@ -4,6 +4,7 @@ class ProductTypesController < ApplicationController
   end
 
   def index
+	@product_types = ProductType.all
   end
 
   def new
