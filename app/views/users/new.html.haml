@@ -1,0 +1,19 @@
+-# edit.html.haml using partial
+
+%h1 User Signup
+
+= form_tag users_path do
+
+  = label :user, :name, 'Name'
+  = text_field :user, 'name'
+
+  = label :user, :password, 'Password'
+  = text_field :user, 'password'
+
+  = label :user, :email, 'Email'
+  = text_field :user, 'email'
+
+  = label :user, :description, 'Description'
+  = text_area :user, 'description'
+
+  = submit_tag 'Save Changes'
