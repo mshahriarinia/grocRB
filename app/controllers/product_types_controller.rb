@@ -36,7 +36,8 @@ class ProductTypesController < ApplicationController
     redirect_to product_types_path
   end
 
-  private def product_type_params
+  private 
+  def product_type_params
     params.required(:product_type).permit(:name, :brand, :description )
   end
 
