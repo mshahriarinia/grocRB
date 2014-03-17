@@ -1,0 +1,14 @@
+%h1 Create New Movie
+
+= form_tag product_types_path do
+
+  = label :product_type, :name, 'Name'
+  = text_field :product_type, 'name'
+
+  = label :product_type, :brand, 'Brand'
+  = text_field :product_type, 'brand'
+
+  = label :product_type, :description, 'Description'
+  = text_area :product_type, 'description'
+
+  = submit_tag 'Save Changes'
