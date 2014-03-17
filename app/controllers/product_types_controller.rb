@@ -1,4 +1,4 @@
-class MoviesController < ApplicationController
+class ProductTypesController < ApplicationController
 
   def show
   end
