@@ -1,0 +1,19 @@
+-# in app/views/product_type/show.html.haml
+
+%h2 Details about #{@product_type.name}
+
+%ul#details
+  %li
+    Name:
+    = @product_type.name
+  %li
+    Brand:
+    = @product_type.brand
+
+%h3 Description:
+
+%p#description= @product_type.description
+
+= link_to 'Edit', edit_product_type_path(@product_type)
+= button_to 'Delete', product_type_path(@product_type), :method => :delete, :confirm => 'Are you sure?'
+= link_to 'Back to product type list', product_types_path

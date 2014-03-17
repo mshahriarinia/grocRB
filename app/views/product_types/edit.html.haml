@@ -1,0 +1,16 @@
+-# edit.html.haml using partial
+
+%h1 Edit Existing Product Type
+
+= form_tag product_type_path(@product_type), :method => :put do
+
+  = label :product_type, :name, 'Name'
+  = text_field :product_type, 'name'
+
+  = label :product_type, :brand, 'Brand'
+  = text_field :product_type, 'brand'
+
+  = label :product_type, :description, 'Description'
+  = text_area :product_type, 'description'
+
+  = submit_tag 'Save Changes'
