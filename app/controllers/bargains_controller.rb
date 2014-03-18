@@ -13,8 +13,11 @@ class BargainsController < ApplicationController
   end
 
   def create
+        logger.info '='*50
+        logger.info bargain_params
+
 	@bargain = Bargain.create!(bargain_params)
-logger.info @bargain
+        #logger.info @bargain
 	flash[:notice] = "Bargain was successfully created."
         redirect_to bargains_path
   end
@@ -39,7 +42,9 @@ logger.info @bargain
 
   private 
   def bargain_params
-    params.required(:bargain).permit(:price, :store, :user, :product_type, :description )
+    logger.info '='*50
+    logger.info params
+    params.required(:bargain).permit(:price, :store_id, :user_id, :product_type_id, :description )
   end
 
 end

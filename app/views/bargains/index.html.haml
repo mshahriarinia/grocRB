@@ -1,7 +1,4 @@
 
-
-
-
 %h1.title Bargains
 
 %table
@@ -16,9 +13,9 @@
     - @bargains.each do |p|
       %tr
         %td= p.price 
-        %td= p.store
-        %td= p.user
-        %td= p.product_type
+        %td= p.store.name if p.store != nil
+        %td= p.user.email  if p.user != nil
+        %td= p.product_type.name  if p.product_type != nil
         %td= link_to "More details", bargain_path(p)
 
 = link_to 'Add bargain', new_bargain_path

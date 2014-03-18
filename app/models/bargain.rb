@@ -1,5 +1,6 @@
 class Bargain < ActiveRecord::Base
-  attr_accessor :store
-  attr_accessor :user
-  attr_accessor :product_type
+  belongs_to :store
+  belongs_to :user
+  belongs_to :product_type
+  
 end

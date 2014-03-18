@@ -8,13 +8,13 @@
     = @bargain.price
   %li
     Store:
-    = @bargain.store
+    = @bargain.store.name + ' - ' + @bargain.store.address
   %li
     User:
-    = @bargain.user
+    = @bargain.user.email
   %li
     Product Type:
-    = @bargain.product_type
+    = @bargain.product_type.name
 
 %h3 Description:
 

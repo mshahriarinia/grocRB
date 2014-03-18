@@ -1,4 +1,5 @@
--# edit.html.haml using partial
+-# edit.html.haml using partial = select :bargain, :product_type, options_for_select(ProductType.all.map{|s|[s.name, s.id]})                                  = select_tag(:product_type_id, options_for_select(ProductType.all.map{|s|[s.name, s.id]}))                     = select_tag(:store_id, options_for_select(Store.all.map{|s|[s.name+ " - "+ s.address, s.id]}))
+
 
 %h1 New bargain
 
@@ -9,15 +10,16 @@
 
 
 
-  = label :bargain, :store, 'Store'
-  = select :bargain, :store, options_for_select(Store.all.map{|s|[s.name+ " - "+ s.address, s.id]})
+  = label :bargain, :store_id, 'Store'
+  = select :bargain, :store_id, options_for_select(Store.all.map{|s|[s.name, s.id]})
 
 
-  = label :bargain, :user, 'User'
-  = select :bargain, :user, options_for_select(User.all.map{|s|[s.email, s.id]})
+  = label :bargain, :user_id, 'User'
+  = select :bargain, :user_id, options_for_select(User.all.map{|s|[s.email, s.id]})
 
   = label :bargain, :product_type, 'Product Type'
-  = select :bargain, :product_type, options_for_select(ProductType.all.map{|s|[s.name, s.id]})
+  = select :bargain, :product_type_id, options_for_select(ProductType.all.map{|s|[s.name, s.id]})
+  
 
   = label :bargain, :description, 'Description'
   = text_area :bargain, 'description'
