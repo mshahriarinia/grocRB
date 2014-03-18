@@ -1,14 +1,16 @@
-%h1 grocRB
 
 = link_to 'About us', :controller => :pages, :action => :about
 = link_to 'Contact', :controller => :pages, :action => :contact
 
-%p Feel free to browse Product Types
-= link_to 'Product types list', product_types_path 
+%p 
+  Feel free to browse
+  = link_to 'product types', product_types_path 
 
-%p Check out users
-= link_to 'Users list', users_path
+%p 
+  Check out registered
+  = link_to 'users', users_path
 
 
-%p Browse list of stores
-= link_to 'Stores list', stores_path 
+%p 
+  Browse list of stores
+  = link_to 'stores', stores_path 
