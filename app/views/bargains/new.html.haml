@@ -1,0 +1,25 @@
+-# edit.html.haml using partial
+
+%h1 New bargain
+
+= form_tag bargains_path do
+
+  = label :bargain, :price, 'Price'
+  = text_field :bargain, 'price'
+
+
+
+  = label :bargain, :store, 'Store'
+  = select :bargain, :store, options_for_select(Store.all.map{|s|[s.name+ " - "+ s.address, s.id]})
+
+
+  = label :bargain, :user, 'User'
+  = select :bargain, :user, options_for_select(User.all.map{|s|[s.email, s.id]})
+
+  = label :bargain, :product_type, 'Product Type'
+  = select :bargain, :product_type, options_for_select(ProductType.all.map{|s|[s.name, s.id]})
+
+  = label :bargain, :description, 'Description'
+  = text_area :bargain, 'description'
+
+  = submit_tag 'Save Changes'

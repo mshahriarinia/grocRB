@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "Product type '#{@user.name}' deleted."
+    flash[:notice] = "User '#{@user.name}' deleted."
     redirect_to users_path
   end
 

@@ -1,0 +1,26 @@
+-# edit.html.haml using partial
+
+%h1 Edit Existing bargain
+
+= form_tag bargain_path(@bargain), :method => :put do
+
+  = label :bargain, :price, 'Price'
+  = text_field :bargain, 'price'
+
+-#  = label :bargain, :store, 'Store'
+-#  = text_field :bargain, 'store'
+
+  = label :bargain, :store, 'Store'
+  = select :bargain, :store, Store.all
+
+
+  = label :bargain, :user, 'User'
+  = text_field :bargain, 'user'
+
+  = label :bargain, :user, 'User'
+  = text_field :bargain, 'user'
+
+  = label :bargain, :description, 'Description'
+  = text_area :bargain, 'description'
+
+  = submit_tag 'Save Changes'
