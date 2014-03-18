@@ -14,3 +14,23 @@
 %p 
   Browse list of stores
   = link_to 'stores', stores_path 
+
+%p 
+  Browse Total list of bargains
+  = link_to 'found near you!', bargains_path 
+  OR look at our top ten deals below:
+
+%table
+  %thead
+    %tr
+      %th Price
+      %th Store
+      %th Product Type
+      %th More Info
+  %tbody
+    - @bargains.each do |p|
+      %tr
+        %td= p.price 
+        %td= p.store.name if p.store != nil
+        %td= p.product_type.name  if p.product_type != nil
+
