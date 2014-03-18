@@ -30,7 +30,15 @@ users = [#{:name => '', :password => '', :email => '', :description => ''},
 	{:name => 'Melissa Wright', :password => 'Parker', :email => 'm.parker@gmail.com', :description => 'I love shopping.'},
 	{:name => 'Janet Williams', :password => 'Stewart', :email => 'js322@gmail.com', :description => 'Mother of two, organic enthusiast.'},
 	{:name => 'Alex Blake', :password => 'alexy', :email => 'alex.blake@gmail.com', :description => 'Community advocate.'},
-	{:name => 'Dave Stanton', :password => 'dvwewecw', :email => 'dave@hotmail.com', :description => 'I love food'}
+	{:name => 'Holly Franklyn', :password => 'test', :email => 'holly23287@yahoo.com' ,:description => 'Hey'},
+	{:name => 'Marissa Secades', :password => 'goldenglobe', :email => 'marisa.se@gmail.com', :description => ''},
+	{:name => 'Emilly Stewart', :password => 'd3k34fkl34', :email => 'bigemily@gmail.com', :description => 'bestty'},
+	{:name => 'Ashley autumn', :password => 'iuhnd', :email => 'ashley@ufl.edu', :description => 'Sorority'},
+	{:name => 'Giovani Lugo', :password => ',m32edjn!#&^', :email => 'Gio@msn.com' ,:description => 'hola!'},
+	{:name => 'Justin Smiths', :password => 'kjwendkwd', :email => 's.justin@gmail.com', :description => 'photographer'},
+	{:name => 'Chrissy Sadge', :password => 'iu3hi3nc23', :email => 'smart_sadge@yahoo.com', :description => 'hmmmmmm.'},
+	{:name => 'Steve Johnson', :password => 'jwiwjnciwjn', :email => 'stevej232@aol.com', :description => 'Stevyyyyy'},
+	{:name => 'Berry Brighton', :password => 'dvwewecw', :email => 'berry.br@gmail.com', :description => 'let\'s shop around :)'}
 ]
 
 users.each do |p|
