@@ -3,5 +3,11 @@ class Bargain < ActiveRecord::Base
   belongs_to :store
   belongs_to :user
   belongs_to :product_type
+
+  validates :price, :presence => true
+  validates :store, :presence => true
+  validates :user, :presence => true
+  validates :product_type, :presence => true  
+  validates :description, length: { maximum: 1300 }
   
 end

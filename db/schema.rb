@@ -14,35 +14,35 @@
 ActiveRecord::Schema.define(version: 20140318022222) do
 
   create_table "bargains", force: true do |t|
-    t.decimal  "price"
-    t.integer  "store_id"
-    t.integer  "user_id"
-    t.integer  "product_type_id"
+    t.decimal  "price",           null: false
+    t.integer  "store_id",        null: false
+    t.integer  "user_id",         null: false
+    t.integer  "product_type_id", null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "product_types", force: true do |t|
-    t.string   "name"
-    t.string   "brand"
-    t.text     "description"
+    t.string   "name",        null: false
+    t.string   "brand",       null: false
+    t.text     "description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "stores", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.text     "description"
+    t.string   "name",        null: false
+    t.string   "address",     null: false
+    t.text     "description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "password"
-    t.string   "email"
+    t.string   "name",        null: false
+    t.string   "password",    null: false
+    t.string   "email",       null: false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
