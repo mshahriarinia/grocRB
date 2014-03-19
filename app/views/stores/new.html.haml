@@ -4,11 +4,12 @@
 
 = form_tag stores_path do
   - if @store.errors.any?
-    %h2 Errors
-    %ul
-      -@store.errors.full_messages.each do |e|
-        %li 
-          = e
+    %div#validation_error
+      %b Errors
+      %ul
+        -@store.errors.full_messages.each do |e|
+          %li 
+            = e
   = label :store, :name, 'Name'
   = text_field :store, 'name'
 

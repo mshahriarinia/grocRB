@@ -3,7 +3,13 @@
 %h1 Edit Existing User
 
 = form_tag user_path(@user), :method => :put do
-
+  - if @user.errors.any?
+    %div#validation_error
+      %b Errors
+      %ul
+        -@user.errors.full_messages.each do |e|
+          %li 
+            = e
   = label :user, :name, 'Name'
   = text_field :user, 'name'
 

@@ -1,32 +1,40 @@
 class UsersController < ApplicationController
 
   def show
-	id = params[:id]
-	@user = User.find(id)
+    id = params[:id]
+    @user = User.find(id)
   end
 
   def index
-	@users = User.all
+    @users = User.all
   end
 
   def new
+    @user ||= User.new
   end
 
   def create
-	@user = User.create!(user_params)
-	flash[:notice] = "#{@user.name} was successfully created."
-        redirect_to users_path
+    @user = User.new(user_params)
+    if(@user.save)
+      flash[:notice] = "#{@user.name} was successfully created."
+      redirect_to users_path
+    else
+      render "new"
+    end
   end
 
   def edit
-	@user = User.find params[:id]
+    @user = User.find params[:id]
   end
 
   def update
-	@user = User.find params[:id]
-	@user.update_attributes!(user_params)
-        flash[:notice] = "#{@user.name} was successfully updated."
-        redirect_to user_path(@user)
+    @user = User.find params[:id]
+    if(@user.update_attributes(user_params))
+      flash[:notice] = "#{@user.name} was successfully updated."
+      redirect_to user_path(@user)
+    else
+      render "edit"
+    end
   end
 
   def destroy

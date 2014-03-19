@@ -3,12 +3,16 @@
 %h1 Edit Existing bargain
 
 = form_tag bargain_path(@bargain), :method => :put do
-
+  - if @bargain.errors.any?
+    %div#validation_error
+      %b Errors
+      %ul
+        -@bargain.errors.full_messages.each do |e|
+          %li 
+            = e
 
   = label :bargain, :price, 'Price'
   = text_field :bargain, 'price'
-
-
 
   = label :bargain, :store_id, 'Store'
   = select :bargain, :store_id, options_for_select(Store.all.map{|s|[s.name, s.id]})

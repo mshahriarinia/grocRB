@@ -3,7 +3,13 @@
 %h1 User Signup
 
 = form_tag users_path do
-
+  - if @user.errors.any?
+    %div#validation_error
+      %b Errors
+      %ul
+        -@user.errors.full_messages.each do |e|
+          %li 
+            = e
   = label :user, :name, 'Name'
   = text_field :user, 'name'
 

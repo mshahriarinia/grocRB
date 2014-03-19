@@ -1,7 +1,13 @@
 %h1 Create New Movie
 
 = form_tag product_types_path do
-
+  - if @product_type.errors.any?
+    %div#validation_error
+      %b Errors
+      %ul
+        -@product_type.errors.full_messages.each do |e|
+          %li 
+            = e
   = label :product_type, :name, 'Name'
   = text_field :product_type, 'name'
 

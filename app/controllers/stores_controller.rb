@@ -14,7 +14,7 @@ class StoresController < ApplicationController
   end
 
   def create
-    @store = Store.new(store_params)
+    @store = Store.new(store_params)     # instead of doing in one step with create! do it in two steps
     if (@store.save)  #make sure validation goes through
       flash[:notice] = "#{@store.name} was successfully created."
       redirect_to stores_path

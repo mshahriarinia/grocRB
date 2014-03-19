@@ -3,7 +3,13 @@
 %h1 Edit Existing Product Type
 
 = form_tag product_type_path(@product_type), :method => :put do
-
+  - if @product_type.errors.any?
+    %div#validation_error
+      %b Errors
+      %ul
+        -@product_type.errors.full_messages.each do |e|
+          %li 
+            = e
   = label :product_type, :name, 'Name'
   = text_field :product_type, 'name'
 
