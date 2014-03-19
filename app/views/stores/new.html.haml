@@ -3,7 +3,12 @@
 %h1 New Store
 
 = form_tag stores_path do
-
+  - if @store.errors.any?
+    %h2 Errors
+    %ul
+      -@store.errors.full_messages.each do |e|
+        %li 
+          = e
   = label :store, :name, 'Name'
   = text_field :store, 'name'
 

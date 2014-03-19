@@ -3,7 +3,13 @@
 %h1 Edit Existing Store
 
 = form_tag store_path(@store), :method => :put do
-
+  - if @store.errors.any?
+    %div#validation_error
+      %b Errors
+      %ul
+        -@store.errors.full_messages.each do |e|
+          %li 
+            = e
   = label :store, :name, 'Name'
   = text_field :store, 'name'
 

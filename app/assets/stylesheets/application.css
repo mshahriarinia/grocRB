@@ -49,7 +49,12 @@ table#movies th, table#movies td {
   text-align: left;
 }
 #notice, #warning {
-  background: rosybrown;
+  background: YellowGreen;
+  margin: 1em 0;
+  padding: 4px;
+}
+#validation_error {
+  background: Tomato;
   margin: 1em 0;
   padding: 4px;
 }
