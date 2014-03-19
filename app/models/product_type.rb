@@ -3,5 +3,5 @@ class ProductType < ActiveRecord::Base
 
   validates :name, :presence => true
   validates :brand, :presence => true
-  validates :description, :presence => true, length: { maximum: 1300 }
+  validates :description, :presence => true, length: { maximum: 2000 }
 end

@@ -3,5 +3,5 @@ class Store < ActiveRecord::Base
 
   validates :name, :presence => true
   validates :address, :presence => true
-  validates :description, length: { maximum: 1300 }
+  validates :description, length: { maximum: 2000 }
 end

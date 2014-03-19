@@ -8,6 +8,6 @@ class Bargain < ActiveRecord::Base
   validates :store, :presence => true
   validates :user, :presence => true
   validates :product_type, :presence => true  
-  validates :description, length: { maximum: 1300 }
+  validates :description, length: { maximum: 2000 }
   
 end
