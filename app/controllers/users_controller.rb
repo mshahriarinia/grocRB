@@ -1,14 +1,16 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+  end
+
+
   def show
     id = params[:id]
     @user = User.find(id)
   end
 
-  def index
-    @users = User.all
-  end
-
+=begin
   def new
     @user ||= User.new
   end
@@ -48,5 +50,6 @@ class UsersController < ApplicationController
   def user_params
     params.required(:user).permit(:name, :password, :email, :description )
   end
+=end
 
 end

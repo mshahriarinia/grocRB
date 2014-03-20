@@ -48,7 +48,7 @@ table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
 }
-#notice, #warning {
+#notice, #warning, #alert {
   background: YellowGreen;
   margin: 1em 0;
   padding: 4px;
@@ -66,4 +66,9 @@ form label {
 }
 table#movies th.hilite {
   background-color: yellow;
+}
+div#user_nav {
+  font-size: 75%;
+  text-align:right;
+  font-style: normal;
 }
